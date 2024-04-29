@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <i class="menu-btn fas fa-bars"></i>
+            <h2 class="logo">SocialReach Insights</h2>
+        </div>
+        <div class="nav-right">
+            <div class="search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="search..."/>
+            </div>
+            <div class="notification">
+                <i class="fas fa-bell"></i>
+            </div>
+        </div>
+    </nav>   
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="Images/profile.jpg" alt="Profile" class="profile-image">
+                <h3>Anlin Bernishia</h3>
+                <p>Web Developer</p>
+            </div>
+            <div class="menu">
+                <div class="menu-detail menu-active">
+                    <a href="#">
+                        <i class="fas fa-chart-pie menu-icon"></i><span>Dashboard</span>
+                    </a>
+                </div>
+                <div class="menu-detail">
+                    <a href="#">
+                        <i class="fas fa-gifts menu-icon"></i><span>Initiatives</span>
+                    </a>
+                </div>
+                <div class="menu-detail">
+                    <a href="#">
+                        <i class="fas fa-headset menu-icon"></i> <span>Support Center</span>
+                    </a>
+                </div>
+                <div class="menu-detail">
+                    <a href="#">
+                        <i class="fas fa-user-secret menu-icon"></i> <span>Security</span>
+                    </a>
+                </div>
+                <div class="menu-detail">
+                    <a href="#">
+                        <i class="fas fa-cog menu-icon"></i> <span>Settings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="left-container">
+                <div class="wrapper">
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <i class="fab fa-instagram social icon"></i>
+                            <h1 class="count">1.5M</h1>
+                            <small>Followers</small>
+                            <div class="dropdown">
+                                <button class="btn btn-more">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">Details</a>
+                                    <a href="#">Download</a>
+                                    <a href="#">Share</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <i class="fab fa-linkedin social icon"></i>
+                            <h1 class="count">2.75k</h1>
+                            <small>Connections</small>
+                            <div class="dropdown">
+                                <button class="btn btn-more">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">Details</a>
+                                    <a href="#">Download</a>
+                                    <a href="#">Share</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <i class="fab fa-youtube social icon"></i>
+                            <h1 class="count">520k</h1>
+                            <small>Subscribers</small>
+                            <div class="dropdown">
+                                <button class="btn btn-more">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">Details</a>
+                                    <a href="#">Download</a>
+                                    <a href="#">Share</a>
+                                </div>
+                            </div>
+                        </div>
+
+                                
+                    </div>
+                    
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <i class="fab fa-facebook-f social icon"></i>
+                            <h1 class="count">232k</h1>
+                            <small>Follwers</small>
+                            <div class="dropdown">
+                                <button class="btn btn-more">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">Details</a>
+                                    <a href="#">Download</a>
+                                    <a href="#">Share</a>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="card">
+                            <i class="fab fa-twitter social icon"></i>
+                            <h1 class="count">4.5M</h1>
+                            <small>Follwers</small>
+                            <div class="dropdown">
+                                <button class="btn btn-more">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                    <a href="#">Details</a>
+                                    <a href="#">Download</a>
+                                    <a href="#">Share</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card">
+                        <div class="title-wrapper">
+                            <h3 class="title">Trend Data</h3>
+                            <div class="filter">
+                                <a class="active" href="#">Day</a>
+                                <a href="#">Week</a>
+                                <a href="#">Month</a>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <div id="chLine"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-container">
+                <div class="card">
+                    <h3 class="title">Summary</h3>
+                    <div id="dougnut-chart"></div>
+                    <div class="chart-detail">
+                        <div class="detail-wrapper">
+                            <i class="fas fa-theater-masks"></i>
+                            <p>Impression</p>
+                            <h3 class="detail-num">3400k <span class="up-down green">+ 64%</span></h3>
+                        </div>
+                        <hr class="divider">
+
+                        <div class="detail-wrapper">
+                            <i class="fas fa-user-friends"></i>
+                            <p>Followers</p>
+                            <h3 class="detail-num">2450 <span class="up-down green">+ 29%</span></h3>
+                        </div>
+                        <hr class="divider">
+
+                        <div class="detail-wrapper">
+                            <i class="fas fa-shapes"></i>
+                            <p>Engagement</p>
+                            <h3 class="detail-num">145 <span class="up-down red">- 13%</span></h3>
+                        </div>
+                        <hr class="divider">
+
+                        <div class="detail-wrapper">
+                            <i class="fas fa-shapes"></i>
+                            <p>Likes</p>
+                            <h3 class="detail-num">475 <span class="up-down green">+ 7%</span></h3>
+                        </div>
+                        <hr class="divider">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-container">
+                <div class="card">
+                    <h3 class="title">Recent Uploads</h3>
+                    <div class="table-wrapper">
+                        <table class="table">
+                            <tr>
+                                <th>Thumbnails & Descriptions</th>
+                                <th>Date</th>
+                                <th>Views</th>
+                                <th>Comments</th>
+                                <th>Likes</th>
+                                <th>More</th>
+                            </tr>
+                            <tr>
+                                <td class="table-title">
+                                    <img class="table-image" src="Images/space.jpg"/>
+                                    <h3>Exploring the Future of Space Travel</h3>
+                                    <p>Dive into the cutting-edge technology and advancements that are shaping the future of space exploration.</p>
+                                </td>
+                                <td>Dec 15, 2022</td>
+                                <td>280k</td>
+                                <td>167</td>
+                                <td>70k</td>
+                                <td><button class="btn btn-table">Details</button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-title">
+                                    <img class="table-image" src="Images/tech.jpg"/>
+                                    <h3>Top 10 Breakthrough Technologies of the Year</h3>
+                                    <p>Highlight the most groundbreaking technological advancements of the year, ranging from AI and robotics to renewable energy and space exploration.</p>
+                                </td>
+                                <td>Jan 20, 2023</td>
+                                <td>32k</td>
+                                <td>769</td>
+                                <td>23k</td>
+                                <td><button class="btn btn-table">Details</button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-title">
+                                    <img class="table-image" src="Images/5G.jpg"/>
+                                    <h3>The Impact of 5G on Space Communication</h3>
+                                    <p>Explore the role of 5G technology in revolutionizing communication systems for space missions.</p>
+                                </td>
+                                <td>Feb 17, 2023</td>
+                                <td>87k</td>
+                                <td>256</td>
+                                <td>65k</td>
+                                <td><button class="btn btn-table">Details</button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-title">
+                                    <img class="table-image" src="Images/Augumented_Reality.jpg"/>
+                                    <h3>Augmented Reality in Everyday Life</h3>
+                                    <p>Showcase how augmented reality (AR) is transforming various industries, from gaming and entertainment to healthcare and education, with practical examples and demonstrations.</p>
+                                </td>
+                                <td>May 13, 2023</td>
+                                <td>456k</td>
+                                <td>1.5k</td>
+                                <td>70k</td>
+                                <td><button class="btn btn-table">Details</button></td>
+                            </tr>
+
+                            <tr>
+                                <td class="table-title">
+                                    <img class="table-image" src="Images/IOT.jpg"/>
+                                    <h3>Internet of Things (IoT) Revolution</h3>
+                                    <p>Explore the interconnected world of IoT devices, highlighting their role in smart homes, cities, and industries, and discussing challenges and opportunities in this rapidly evolving field.</p>
+                                </td>
+                                <td>Dec 23, 2023</td>
+                                <td>874k</td>
+                                <td>467k</td>
+                                <td>678k</td>
+                                <td><button class="btn btn-table">Details</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="JS/app.js"></script>
+</html>
